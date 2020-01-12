@@ -1,0 +1,162 @@
+/* BASE STYLES -------------- */
+body {
+    font-family: 'Dosis', sans-serif;
+    background-color: rgb(228, 228, 220);
+}
+
+h1 {
+    margin: 0;
+}
+
+fieldset {
+    border: none;
+    border-top: 1px solid black;
+    padding: 0;
+}
+
+.contact_formset {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-flex-flow: column nowrap;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+}
+
+legend {
+    font-size: 1.3em;
+    padding: 13px 0 13px 0;
+}
+
+label {
+    margin-bottom: 7px;
+}
+
+textarea {
+    border-radius: 5px;
+    background-color: rgb(238, 238, 238);
+    border: none;
+}
+
+footer {
+    text-align: center;
+}
+
+footer p {
+    font-size: small;
+    font-style: italic;
+}
+
+
+/* LAYOUT STYLES ------------ */
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.header {
+    background-color: rgb(50, 57, 88);
+    color: white;
+    font-family: 'Grenze', serif;
+    text-align: center;
+    padding: 25px;
+}
+
+.top-information {
+    text-align: center;
+    border-bottom: 1.5px solid black;
+}
+
+.contact_formset > input,
+.contact_formset > select {
+   height: 43px;
+   border-radius: 5px;
+   border: none;
+   background-color: rgb(238, 238, 238);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    display: inline-block;
+    margin: 7px 0 7px 0;
+}
+
+.newsletter_formset > p {
+    margin: 13px 0 13px 0;
+}
+
+input[type="submit"] {
+    border: none;
+    width: 100%;
+    height: 50px;
+    margin: 21px 0 9px 0;
+    border-radius: 5px;
+    background-color: rgb(83, 197, 172);
+    color: white;
+    font-weight: bold;
+}
+
+input::placeholder {
+    text-align: right;
+    padding: 15px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    background-color: white;
+    transition: background 1s;
+}
+
+input[type="submit"]:focus {
+    background-color: darkslateblue;
+}
+
+/* ID STYLES ---------------- */
+
+#other_topics {
+    width: 100%;
+    margin-top: 10px;
+}
+
+#zipcode {
+    width: 30%;
+}
+
+/* MEDIA QUERIES ------------ */
+
+@media (min-width: 768px) {
+
+    .container {
+        width: 60%;
+    }
+    
+    .contact_formset {
+        -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+    }
+
+    .contact_formset > input:not([name*="zipcode"]),
+    .contact_formset > select {
+        flex-basis: 69%;
+    } 
+
+    .contact_formset > label {
+        flex-basis: 30%;
+    }
+
+    .contact_formset > input,
+    .contact_formset > select,
+    .contact_formset > label {
+        margin: 7px 0;
+    }
+
+    #zipcode {
+        width: 30%
+    }
+    
+}
